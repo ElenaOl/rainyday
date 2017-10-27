@@ -135,16 +135,22 @@ class UserData extends Component {
   render() {
     console.log("USER DATA STATE", this.state)
     return (
-      <div className="UserDataWrapper">
+      <div className="UserDataWrapper row">
+       <p>UserData Page</p>
+        <div>
         <SingleDatePicker
                // momentPropTypes.momentObj or null
               onDateChange={(e) => this.handleDateChange( e )} // PropTypes.func.isRequired
               focused={this.state.focused} // PropTypes.bool
               onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
             />
-        <p>UserData Page</p>
+        </div>
+        
         <UserSummary />
+        <div className='right'>
         <UserPieCharts />
+        </div>
+        
         <UserBarGraph />
       </div>
     );

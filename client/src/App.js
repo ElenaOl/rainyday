@@ -16,7 +16,6 @@ import BankRecords from './BankRecords.js';
 import EditBankData from './EditBankData';
 //////////////////////////////////////////////////
 import UserData from './UserData.js';
-import Logout from './Logout';
 import {Button, Icon, Parallax, Carousel, Modal} from 'react-materialize';
 
 
@@ -88,8 +87,8 @@ class App extends Component {
 
             <a href="/" className="brand-logo right"><i className="material-icons left">beach_access </i>RainyDay </a>
 
-            <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-              <div className='hide-on-sm-and-down'>
+            <a href="/" className="button-collapse "><i className="material-icons">menu</i></a>
+              <div className='hide-on-med-and-down'>
               <Link to="/" className="btn btn-large #99d3df cyan darken-3 ">Home</Link>
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 ">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 ">Bank Records</Link>
@@ -97,12 +96,12 @@ class App extends Component {
               <a className="btn btn-large #00838f cyan darken-3 " onClick={this.handleLogout}>Log Out</a>
 
               </div>
-              <div className="side-nav row" id="mobile-demo">
+              <div className="side-nav row " id="mobile-demo">
               <Link to="/" className="btn btn-large #99d3df cyan darken-3 col s12 ">Home</Link>
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 col s12">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">User Data</Link>
-              <a className="btn btn-large #00838f cyan darken-3 col s12" onClick={this.handleLogout}>Log Out</a>
+              <a className="btn btn-large #00838f cyan darken-3 col s12" onClick={this.handleLogout} user={this.state.user}>Log Out</a>
 
               </div>
              </div>
