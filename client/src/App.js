@@ -78,11 +78,11 @@ class App extends Component {
             <nav className="RouterLinks  #00838f cyan darken-3  navbar">
             <div className="nav-wrapper">
 
-            <a href="/homeReactRoute" className="brand-logo right"><i className="material-icons left">beach_access </i>RainyDay </a>
+            <a href="/" className="brand-logo right"><i className="material-icons left">beach_access </i>RainyDay </a>
 
-            <a href="/homeReactRoute" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+            <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <div className='hide-on-sm-and-down'>
-              <Link to="/homeReactRoute" className="btn btn-large #99d3df cyan darken-3 ">Home</Link>
+              <Link to="/" className="btn btn-large #99d3df cyan darken-3 ">Home</Link>
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 ">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 ">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 ">User Data</Link>
@@ -90,7 +90,7 @@ class App extends Component {
 
               </div>
               <div className="side-nav row" id="mobile-demo">
-              <Link to="/homeReactRoute" className="btn btn-large #99d3df cyan darken-3 col s12 ">Home</Link>
+              <Link to="/" className="btn btn-large #99d3df cyan darken-3 col s12 ">Home</Link>
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 col s12">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">User Data</Link>
@@ -98,7 +98,7 @@ class App extends Component {
              </div>
             </nav>
             <div>
-              <Route exact path="/homeReactRoute"
+              <Route exact path="/"
                 render={() => <Home childProp={this.state.childProp} />}
               />
               <Route exact path="/savingsReactRoute"
@@ -116,19 +116,36 @@ class App extends Component {
       );
     } else{ //if it doesn't exist go to the login page
       return(
-       
+        <Router>
         <div className="App">
-                      <nav className="RouterLinks  #00838f cyan darken-3  navbar">
-                  
+                      
+              <nav className="RouterLinks  #00838f cyan darken-3  navbar">
+                 <div className="nav-wrapper">
+                   <a href="/" className="brand-logo right"><i className="material-icons left">beach_access </i>RainyDay </a>
+                   <div className='left'>
+                      <Link to="/Signup" className="btn btn-large #00838f cyan darken-3 ">Sign up</Link>
+                      <Link to="/Login" className="btn btn-large #00838f cyan darken-3 ">Login</Link>
+                  </div>
+                </div>
               </nav>
-           <div className="SignupBox">
-            <Signup lift={this.liftTokenToState} />
-          </div> 
-          <div className="LoginBox">
-            <Login lift={this.liftTokenToState} />
-          </div>
+
+             <div>
+             <Route exact path="/"
+                render={() => <Home childProp={this.state.childProp} />}
+              />
+                <Route exact path="/Signup"
+                render={() => <Signup lift={this.liftTokenToState} />}
+              />
+
+              <Route exact path="/Login"
+                render={() => <Login lift={this.liftTokenToState} />}
+              />
+              
+            </div>
           
+
         </div>
+        </Router>
       )
     }
   }

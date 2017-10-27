@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
 import {Button, Icon, Parallax, Carousel} from 'react-materialize';
+import Oar4 from './img/liz.png';
+
 
 class Home extends Component {
     constructor(props) {
@@ -276,7 +278,7 @@ class Home extends Component {
                             <div className="col s3 ">
                                 <div className="card  hoverable  ">
                                         <div className="card-image border-tlr-radius">
-                                            <img className='border-tlr-radius responsive-img' src="http://38.media.tumblr.com/4d7b2c7624eca03c7271c5294e2b9c13/tumblr_mltee6NXLH1qjmb9ko1_500.png"  alt=""/>
+                                            <img className='border-tlr-radius responsive-img' src="/img/liz.png"  alt=""/>
                                             <span className="card-title">Front End Developer</span>
                                         </div>
                                     <div className="card__content card__padding" >
