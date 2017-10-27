@@ -30,7 +30,7 @@ class App extends Component {
 
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
-    this.logout = this.logout.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
 
   }
 
@@ -44,7 +44,9 @@ class App extends Component {
   })
 
   }
-logout() {
+
+  handleLogout(e) {
+    e.preventDefault()
     localStorage.removeItem('mernToken')
     this.setState({token: '', user: {}})
   }
@@ -92,8 +94,7 @@ logout() {
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 ">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 ">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 ">User Data</Link>
-              <Link to="/Logout" className="btn btn-large #00838f cyan darken-3 ">Log Out</Link>
-
+              <a className="btn btn-large #00838f cyan darken-3 " onClick={this.handleLogout}>Log Out</a>
 
               </div>
               <div className="side-nav row" id="mobile-demo">
@@ -101,6 +102,7 @@ logout() {
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 col s12">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">User Data</Link>
+              <a className="btn btn-large #00838f cyan darken-3 col s12" onClick={this.handleLogout}>Log Out</a>
 
               </div>
              </div>
@@ -118,9 +120,7 @@ logout() {
               <Route exact path="/userDataReactRoute" 
                 render={() => <UserData user={this.state.user} />}
               />
-              <Route exact path="/Logout" 
-                render={() => <Logout user={this.state.user} logout={this.logout} />}
-              />
+             
               
 
             </div>
