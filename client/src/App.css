@@ -56,7 +56,7 @@ html {
 }
 
 .notmoving{
-  position: fixed; 
+  /* position: fixed;  */
 	background-color: rgb(92, 119, 177);
   overflow: hidden;
   width: 100%;
@@ -69,7 +69,7 @@ html {
 	color: white;
 }
 
-.notmoving:hover{
+/* .notmoving:hover{
   position: fixed; 
 	background-color: rgb(92, 119, 177);
   overflow: hidden;
@@ -80,7 +80,7 @@ html {
 	top:0;
 	font-size: 17px;
 	color: white;
-}
+} */
 
 
 /* #tableLable {

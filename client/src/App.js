@@ -16,6 +16,7 @@ import BankRecords from './BankRecords.js';
 import EditBankData from './EditBankData';
 //////////////////////////////////////////////////
 import UserData from './UserData.js';
+import Logout from './Logout';
 import {Button, Icon, Parallax, Carousel, Modal} from 'react-materialize';
 
 
@@ -29,6 +30,8 @@ class App extends Component {
 
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
+    this.logout = this.logout.bind(this)
+
   }
 
 
@@ -41,7 +44,10 @@ class App extends Component {
   })
 
   }
-
+logout() {
+    localStorage.removeItem('mernToken')
+    this.setState({token: '', user: {}})
+  }
 
   isEmpty(obj) {
     for(var prop in obj) {
@@ -86,7 +92,8 @@ class App extends Component {
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 ">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 ">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 ">User Data</Link>
-              
+              <Link to="/Logout" className="btn btn-large #00838f cyan darken-3 ">Log Out</Link>
+
 
               </div>
               <div className="side-nav row" id="mobile-demo">
@@ -94,12 +101,13 @@ class App extends Component {
               <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 col s12">Savings</Link>
               <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">Bank Records</Link>
               <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 col s12">User Data</Link>
+
               </div>
              </div>
             </nav>
             <div>
               <Route exact path="/"
-                render={() => <Home childProp={this.state.childProp} />}
+                render={() => <Home childProp={this.state.childProp} logout={this.logout} />}
               />
               <Route exact path="/savingsReactRoute"
                 render={() => <Savings user={this.state.user} />}
@@ -110,6 +118,11 @@ class App extends Component {
               <Route exact path="/userDataReactRoute" 
                 render={() => <UserData user={this.state.user} />}
               />
+              <Route exact path="/Logout" 
+                render={() => <Logout user={this.state.user} logout={this.logout} />}
+              />
+              
+
             </div>
           </div>
         </Router>

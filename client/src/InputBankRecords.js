@@ -69,6 +69,9 @@ class InputBankRecords extends Component {
               <span>File</span>
               <input type="file" name="uploadCSV" onChange={this.uploadFile}/>
             </div>
+            <div className="file-path-wrapper">
+        <input className="file-path validate" type="text" placeholder="Upload one or more files"/>
+      </div>
           </div>
         </form>
 

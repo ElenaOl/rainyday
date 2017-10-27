@@ -11,8 +11,14 @@ class Home extends Component {
         this.state = {
             childProp:""
         }
+        this.handleLogout = this.handleLogout.bind(this)
+        
     }
-
+    handleLogout(e) {
+        e.preventDefault()
+        localStorage.removeItem('mernToken')
+        this.props.logout()
+      }
 
     componentDidMount() {
         $('.card__share > a').on('click', function(e){
@@ -52,7 +58,7 @@ class Home extends Component {
 
                              </div>
                            
-                           
+                            
                              <br/><br/>
                              
                                <div className="container space">

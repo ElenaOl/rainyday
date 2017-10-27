@@ -34,18 +34,15 @@ class BankRecords extends Component {
 
     return (
 
-      <div className="BankRecordsWrapper  " >
-        <p>BankRecords Page</p>
+      <div className="BankRecordsWrapper row" >
+        <div className='col s10 offset-s1'>
         <InputBankRecords user={user}/>
 
-
-        <section className="row  " >
+        <div className='movepage'></div> 
+        <section className=' z-depth-2'>
 {/* movepage */}
    
-            
-
-
-            <ul id='tableLable' className='notmoving ' onClick={this.change}>
+   <ul id='tableLable' className='notmoving ' onClick={this.change}>
               <li className='col s3'>Date</li>
               <li className='col s3'>Description</li>
               <li className='col s3'>Amount</li>
@@ -54,15 +51,20 @@ class BankRecords extends Component {
 <br/><br/>
        
        
-        <div className='movepage'></div> 
+        {/* <div className='movepage'></div>  */}
    
 
 
 
         <EditBankData user={user}/>
        
-        </section>
-        
+       
+ 
+            
+   </section>
+
+    
+   </div>
       </div>
 
 
