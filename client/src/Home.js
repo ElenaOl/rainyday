@@ -33,7 +33,7 @@ class Home extends Component {
         return (
             <div >
             
-                             <div id="index-banner" className="parallax-container">
+                             <div id="index-banner" className="parallax-container z-depth-5">
                                <div className="section no-pad-bot">
                                  <div className="container">
                                  <br/>
@@ -45,8 +45,7 @@ class Home extends Component {
                            
                                  </div>
                                </div>
-                               {/* <Parallax imageSrc="https://static.pexels.com/photos/268941/pexels-photo-268941.jpeg"/> */}
-                               <div className="parallax"><img src="/img/umbrellas.png" alt="Unsplashed background img 2"/></div>
+                               <div className="parallax"><img src="/img/leaf.jpeg" height='800' alt="Unsplashed background img 2"/></div>
 
                              </div>
                            
@@ -77,22 +76,18 @@ class Home extends Component {
                                          <p className="light">
                                         Next seporate your neccisary spending with your lessure spending. That way you can see how much money you can work on saving.
                                          </p>
-                                         {/* Next, you can start tracking your good spending habbits by saving each time you would have 
-                                             spent on either Entertainment, Shopping, Dinning out, Uber/lyft, or and other 
-                                             non-neccisary vice. This way you can track your good decisions, and can track how much money
-                                             you have saved. */}
+                                        
                                        </div>
                                      </div>
                              
                                      <div className="col s12 m4">
-                                       <div className="icon-block  hoverable info-card">
+                                       <div className="icon-block  hoverable info-card ">
                                          <h2 className="center brown-text"><i className="large material-icons">map</i></h2>
                                          <h5 className="center">Set goals to cut down </h5>
                              
                                          <p className="light">
                                              once you have seporated your necessary spending with you lesure spending, you can better determine what you want to cut down on.
                                           </p>
-                                              {/* Finally, here you can see and compare how much you purposely saved with how much you usually spend. */}
                                        </div>
                                      </div>
                                    </div>
@@ -427,7 +422,19 @@ class Home extends Component {
                              </footer>
                    
             
+                             <div className="fixed-action-btn toolbar">
+    <a className="btn-floating btn-large red">
+      <i className="large material-icons">flare</i>
+    </a>
+    <ul className='row'>
+            <li className='col s2'><a href="#!"><i >Date</i></a></li>
+            <li className='col s2'><a href="#!"><i >Description</i></a></li>
+            <li className='col s2'><a href="#!"><i >Amount</i></a></li>
+            <li className='col s2'><a href="#!"><i >Category</i></a></li>
+            <li className='col s2'><a href="#!"><i >Delete</i></a></li>
 
+          </ul>
+  </div>
 
                   </div>
 

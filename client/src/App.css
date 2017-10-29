@@ -15,7 +15,10 @@ li {
   display: inline-block;
 }
 
+color{
+	color: black;
 
+}
 
 header{
   height: 50vh;
@@ -403,6 +406,7 @@ h2 {
 	}
 	.movepage{
 		margin-top:120px;
+		
 	}
 	
  

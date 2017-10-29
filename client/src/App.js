@@ -69,16 +69,16 @@ class App extends Component {
       return (
         <Router>
           <div className='row'>
-            <nav className="RouterLinks  #00838f cyan darken-3  navbar">
+            <nav className="RouterLinks #263238 blue-grey darken-4">
             <div className="nav-wrapper">
-            <a href="/" className="brand-logo right"><i className="material-icons left">beach_access </i>RainyDay </a>
+            <a href="/" className="brand-logo  right"><i className="material-icons left">beach_access </i>RainyDay </a>
             <a href="/" className="button-collapse "><i className="material-icons">menu</i></a>
               <div className='hide-on-med-and-down'>
-              <Link to="/" className="btn btn-large #99d3df cyan darken-3 ">Home</Link>
-              <Link to="/savingsReactRoute" className="btn btn-large #88bbd6 cyan darken-3 ">Savings</Link>
-              <Link to="/bankRecordsReactRoute" className="btn btn-large #00838f cyan darken-3 ">Bank Records</Link>
-              <Link to="/userDataReactRoute" className="btn btn-large #00838f cyan darken-3 ">User Data</Link>
-              <a className="btn btn-large #00838f cyan darken-3 " onClick={this.handleLogout}>Log Out</a>
+              <Link to="/" className="btn btn-large #26a69a teal lighten-1">Home</Link>
+              <Link to="/savingsReactRoute" className="btn btn-large #263238 blue-grey darken-4 ">Savings</Link>
+              <Link to="/bankRecordsReactRoute" className="btn btn-large #263238 blue-grey darken-4 ">Bank Records</Link>
+              <Link to="/userDataReactRoute" className="btn btn-large #263238 blue-grey darken-4 ">User Data</Link>
+              <a className="btn btn-large #263238 blue-grey darken-4 " onClick={this.handleLogout}>Log Out</a>
               </div>
               <div className="side-nav row " id="mobile-demo">
               <Link to="/" className="btn btn-large #99d3df cyan darken-3 col s12 ">Home</Link>

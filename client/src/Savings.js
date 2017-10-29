@@ -52,6 +52,15 @@ class Savings extends Component {
         <EnterSavings  addSaving={this.addSaving} user={user}/>
         <AllSavings savings={this.state.savings}  setSavings={this.setSavings} user={user}/>
         {/* <SavingsSummary user={user}/> */}
+        <div className="fixed-action-btn toolbar">
+    <a className="btn-floating btn-large #26a69a teal lighten-1">
+      <i className="large material-icons">flare</i>
+    </a>
+  
+    <ul>
+      <li className="waves-effect waves-light"><a href="#!"><i >Here you can add your savings</i></a></li>
+      </ul>
+  </div>
       </div>
 
     );

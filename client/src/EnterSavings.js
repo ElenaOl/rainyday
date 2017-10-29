@@ -132,21 +132,21 @@ class EnterSavings extends Component {
 
 
     return (
-      <div className="EnterSavingsWrapper">
+      <div className="EnterSavingsWrapper row">
         <h4>Choose your savings</h4>
         <form id="myform" onSubmit={(e) => {this.handleSubmit(e); this.resetForm(e)}}>    
-          <div className="row highlight">
-            <div className="input-field col s12">
+          <div className=" highlight">
+            <div className="input-field col s6">
               <input id="Description" type="text" className="validate" name="Description" onChange={this.handleChangeDescription} required/>
               <label htmlFor="Description">Describe what you are saving on..</label>
             </div>
           </div>
       
-          <div className="row highlight">
-            <div className="col s12">  
+          <div className="highlight">
+            <div className="col s6">  
               <h5>Category</h5>  
               <select name="Category" value={this.state.value} onChange={this.handleChangeCategory} required>
-                <option  value="" disabled defaultValue> </option>
+                <option  value="" > </option>
                 <option value="Bills">Bills</option>
                 <option value="Groceries">Groceries</option>
                 <option value="Transportation">Transportation</option>
@@ -165,7 +165,7 @@ class EnterSavings extends Component {
           </div>  
           <br />
       
-          <div className="row highlight">
+          <div className=" highlight">
             <div className="input-field col s12">
               <input type="number" name="Amount" className="validate"  onChange={this.handleChangeAmount} required/>  
               <label htmlFor="Amount">Money saved ($)</label>
