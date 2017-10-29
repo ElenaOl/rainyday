@@ -422,19 +422,7 @@ class Home extends Component {
                              </footer>
                    
             
-                             <div className="fixed-action-btn toolbar">
-    <a className="btn-floating btn-large red">
-      <i className="large material-icons">flare</i>
-    </a>
-    <ul className='row'>
-            <li className='col s2'><a href="#!"><i >Date</i></a></li>
-            <li className='col s2'><a href="#!"><i >Description</i></a></li>
-            <li className='col s2'><a href="#!"><i >Amount</i></a></li>
-            <li className='col s2'><a href="#!"><i >Category</i></a></li>
-            <li className='col s2'><a href="#!"><i >Delete</i></a></li>
-
-          </ul>
-  </div>
+                             
 
                   </div>
 
