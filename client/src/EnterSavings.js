@@ -132,7 +132,7 @@ class EnterSavings extends Component {
 
 
     return (
-      <div className="EnterSavingsWrapper row">
+      <div className="EnterSavingsWrapper row ">
         <h4>Choose your savings</h4>
         <form id="myform" onSubmit={(e) => {this.handleSubmit(e); this.resetForm(e)}}>    
           <div className=" highlight">
@@ -182,9 +182,13 @@ class EnterSavings extends Component {
               showDefaultInputIcon={true}
             />
 
+            
             <br/>
-          <input type="submit" value="Submit" />
+          <input className="btn waves-effect waves-light movedownalittle" type="submit" value="Submit"  />
         </form>
+        <br className/>
+        <div className="divider"></div>
+       
       </div>
     );
   }

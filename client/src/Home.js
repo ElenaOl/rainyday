@@ -19,8 +19,7 @@ class Home extends Component {
             $(this).toggleClass('share-expanded');
         });
        
-       
-            // $('.parallax').parallax();
+    
         
        
         }
@@ -314,7 +313,7 @@ class Home extends Component {
                                     <div className="card__share">
                                           <div className="card__social">
                                               <a className="share-icon mail" ><span className="fa fa-envelope"></span></a>
-                                              <a className="share-icon linkedin" ><span className="fa fa-linkedin"></span></a>
+                                              <a href='https://www.linkedin.com/in/elizabeth-friedland13/' className="share-icon linkedin" ><span className="fa fa-linkedin"></span></a>
                                               <a className="share-icon github" ><span className="fa fa-github"></span></a>
                                           </div>
             
@@ -364,7 +363,7 @@ class Home extends Component {
                                     <div className="card__share">
                                           <div className="card__social">
                                               <a className="share-icon mail" ><span className="fa fa-envelope"></span></a>
-                                              <a className="share-icon linkedin" ><span className="fa fa-linkedin"></span></a>
+                                              <a href='https://www.linkedin.com/in/elizabeth-friedland13/' className="share-icon linkedin" ><span className="fa fa-linkedin"></span></a>
                                               <a className="share-icon github" ><span className="fa fa-github"></span></a>
                                           </div>
             

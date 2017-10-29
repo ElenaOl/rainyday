@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import $ from 'jquery';
+
 import axios from 'axios';
 var Papa = require('papaparse');
 
@@ -37,6 +39,12 @@ class InputBankRecords extends Component {
       user: user,
       records: records
     })
+
+    $('.card__share > a').on('click', function(e){
+      e.preventDefault() // prevent default action - hash doesn't appear in url
+         $(this).parent().find( 'div' ).toggleClass( 'card__social--active' );
+      $(this).toggleClass('share-expanded');
+  });
   }
 
   render() {
@@ -55,7 +63,20 @@ class InputBankRecords extends Component {
               <input type="file" name="uploadCSV" onChange={this.uploadFile}/>
             </div>
           </div>
+          
         </form>
+       
+        <div className="card__share">
+          <div className="card__social">
+              <a  ><span light-blue lighten-4>Instructions </span></a>
+              
+          </div>
+
+          <a id="share" className="  share-icon" >?</a>
+      </div>
+
+
+
 
       </div>
     );
