@@ -159,7 +159,7 @@ class Home extends Component {
                   </div>
                   <div className="card__meta">
                     <a >Andrew Stevens</a>
-                    <time>30 October</time>
+                    {/* <time>30 October</time> */}
                   </div>
                   <article className="card__article">
                     <h4>About Andrew</h4>
@@ -189,7 +189,7 @@ class Home extends Component {
                   </div>
                   <div className="card__meta">
                     <a >Brian Connor</a>
-                    <time>30 October</time>
+                    {/* <time>30 October</time> */}
                   </div>
                   <article className="card__article">
                     <h4>About Brian</h4>
@@ -216,7 +216,7 @@ class Home extends Component {
                   </div>
                   <div className="card__meta">
                     <a>Elena Olekh</a>
-                    {<time>30 October</time>}
+                    {/*<time>30 October</time>*/}
                   </div>
                   <article className="card__article">
                     <h4>About Elena</h4>
@@ -246,7 +246,7 @@ class Home extends Component {
                     </div>
                     <div className="card__meta">
                       <a >Elizabeth Friedland</a>
-                      <time>30th October</time>
+                      {/* <time>30th October</time> */}
                     </div>
                     <article className="card__article">
                       <h4>About Elizabeth</h4>

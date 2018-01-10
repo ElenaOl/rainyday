@@ -27,38 +27,33 @@ class Login extends Component {
       password: this.state.password
     }).then(result => {
       localStorage.setItem('mernToken', result.data.token)
+      localStorage.setItem('userId', result.data.user.id)
       this.props.lift(result.data.token, result.data.user.id)
     })
   }
 
   render() {
     return (
-     
       <div className='row '>
-         <div className='movedown'></div>
-
-          <h1>LogIn</h1>
-
-         <div className='movedownalittle'></div>
-
-        <form  onSubmit={this.handleSubmit} className='col s6 offset-s3 z-depth-5 padding movedownalittle'>
         <div className='movedown'></div>
-
-       <h5 className='left'> Email: </h5><input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
-        <div className='movedown'></div>
-
-        <h5 className='left'> Password:  </h5><input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+        <h3>Please Log In</h3>
         <div className='movedownalittle'></div>
-        <input 
-          type='submit' 
-          value='Login'  
-          className='col s12 waves-effect waves-light btn movedownalittle movedownmore #263238 blue-grey darken-4' />
-        <div className='movedown'></div>
-        <div className='movedown'></div>
-        <div className='movedownmore'></div>
-       </form>
+        <form  onSubmit={this.handleSubmit} className='col s4 offset-s4 z-depth-5 padding movedownalittle'>
+          <div className='movedownalittle'></div>
+          <h5 className='left'> Email: </h5><input type='text' value={this.state.email} onChange={this.handleEmailChange} /><br />
+          <div className='movedownalittle'></div>
+          <h5 className='left'> Password:  </h5><input type='password' value={this.state.password} onChange={this.handlePasswordChange} /><br />
+          <div className='movedownalittle'></div>
+          <input 
+            type='submit' 
+            value='Login'  
+            className='col s12 waves-effect waves-light btn movedownalittle movedownmore #263238 blue-grey darken-4' 
+          />
+          <div className='movedown'></div>
+          <div className='movedown'></div>
+          <div className='movedownmore'></div>
+        </form>
       </div>
-      
     );
   }
 }
