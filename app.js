@@ -16,7 +16,7 @@ var Papa = require('papaparse');
 var mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/mern-local-auth');
 // mongoose.connect('mongodb://localhost/rainyDay');
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});  //USE THIS WHEN DEPLOYING
 
 var BankRecord = require('./models/bankRecord');
 var User = require('./models/user');
@@ -70,12 +70,11 @@ app.use(function(req, res, next) {
 // app.use(passport.session());
 
 // app.use('/', index);
-app.use('/users', users);
+// app.use('/users', users);
 app.use('/auth', auth);
 app.use('/bankRecords', bankRecords);
 
 app.get('*', function(req, res, next) {res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));}); 
-
 
 
 module.exports = app;
