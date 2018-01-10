@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
+// import $ from 'jquery';
 import './App.css';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import moment from 'moment';
+// import moment from 'moment';
 import { DateRangePicker, SingleDatePicker } from 'react-dates';
 
 
@@ -91,7 +91,7 @@ class EnterSavings extends Component {
     this.setState({
       user: user
     })
-    }
+  }
 
 
 

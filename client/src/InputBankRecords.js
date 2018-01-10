@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
 import $ from 'jquery';
-var Papa = require('papaparse');
+// var Papa = require('papaparse');
 
 
 class InputBankRecords extends Component {
