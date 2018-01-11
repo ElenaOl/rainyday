@@ -218,7 +218,7 @@ class Home extends Component {
                     <a>Elena Olekh</a>
                     {/*<time>30 October</time>*/}
                   </div>
-                  <article className="card__article">
+                  <article className="card__article el">
                     <h4>About Elena</h4>
                     <p>I am a web developer with a passion for science and dedication to details. 
                       My previous experience in research, project management and regulatory affairs 

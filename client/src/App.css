@@ -419,3 +419,6 @@ input[type=text]:not(.browser-default){
 .movepage{
 	margin-top:120px;
 }
+.el{
+	height: 400px;
+}
